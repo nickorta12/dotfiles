@@ -1,0 +1,27 @@
+[user]
+    name = Nicholas Orta
+    email = nickorta12@gmail.com
+[init]
+    defaultBranch = main
+[alias]
+    co = checkout
+    cob = checkout -b
+    aa = add -A .
+    br = branch
+    ci = commit
+    d = diff
+    dc = diff --cached
+    f = fetch --tags
+    fp = fetch --prime --tags
+    s = show
+    st = status
+    ol = log --oneline --all --decorate --graph --color=always
+    olh = ! git ol | head
+    unstage = reset HEAD --
+    untrack = update-index --assume-unchanged
+    retrack = update-index --no-assume-unchanged
+    amend = commit --amend --no-edit --date=now
+    show-author = ! git show --pretty=fuller --color=always | head -n5
+    add-commit-ammend = ! git aa && git amend
+[color]
+    ui = auto
