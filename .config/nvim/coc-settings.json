@@ -1,0 +1,6 @@
+{
+    "xml.java.home": "/usr/lib/jvm/java",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "~/.local/bin/black",
+    "python.analysis.stubPath": "~/mypy"
+}
