@@ -42,7 +42,7 @@ WORDCHARS=${WORDCHARS//[\/]}
 # -----------------
 
 # Use degit instead of git as the default tool to install and update modules.
-#zstyle ':zim:zmodule' use 'degit'
+zstyle ':zim:zmodule' use 'degit'
 
 # --------------------
 # Module configuration
