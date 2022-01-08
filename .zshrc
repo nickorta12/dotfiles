@@ -42,7 +42,7 @@ WORDCHARS=${WORDCHARS//[\/]}
 # -----------------
 
 # Use degit instead of git as the default tool to install and update modules.
-zstyle ':zim:zmodule' use 'degit'
+#zstyle ':zim:zmodule' use 'degit'
 
 # --------------------
 # Module configuration
@@ -160,13 +160,14 @@ alias g='git'
 alias cloc='tokei'
 alias ariadl='aria2c -j12 -x12 -s12 -k1M'
 alias zshreload='. $HOME/.zshrc'
-alias zshedit='nvim $HOME/.zshrc && zimfw build && zshreload'
+alias zshedit='nvim $HOME/.zshrc && zimfw build'
 alias nvimedit='nvim ~/.config/nvim/init.vim'
 alias pywork='workond && c.'
 alias rgl='rgless'
 alias tn='tmux neww'
 alias gd='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias vimdiff='nvim -d'
+alias c.='code .'
 
 export PAGER="less -rF"
 export BAT_PAGER="less -iRF"
@@ -174,6 +175,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+fpath=(~/zsh $fpath)
 fpath+=(/opt/homebrew/share/zsh/site-functions/)
 
 # Custom functions
