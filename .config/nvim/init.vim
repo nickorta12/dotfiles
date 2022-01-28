@@ -75,3 +75,7 @@ autocmd BufReadPost *
   \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
   \ |   exe "normal! g`\""
   \ | endif
+
+au BufRead,BufNewFile *.service set filetype=systemd
+au BufRead,BufNewFile *.target set filetype=systemd
+au BufRead,BufNewFile *.socket set filetype=systemd
