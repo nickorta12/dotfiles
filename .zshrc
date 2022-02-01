@@ -172,7 +172,7 @@ alias c.='code .'
 export PAGER="less -rF"
 export BAT_PAGER="less -iRF"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 fpath=(~/zsh $fpath)
