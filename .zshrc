@@ -23,7 +23,7 @@ alias g='git'
 alias cloc='tokei'
 alias ariadl='aria2c -j12 -x12 -s12 -k1M'
 alias zshreload='. $HOME/.zshrc'
-alias zshedit='nvim $HOME/.zshrc && zimfw build'
+alias zshedit='nvim $HOME/.zshrc'
 alias nvimedit='nvim ~/.config/nvim/init.vim'
 alias pywork='workond && c.'
 alias rgl='rgless'
@@ -31,7 +31,11 @@ alias tn='tmux neww'
 alias gd='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias vimdiff='nvim -d'
 alias c.='code .'
-alias fs='ssh fs'
+alias fs='/usr/bin/ssh fs'
+alias ssh='TERM=xterm-256color ssh'
+alias aipy='~/.venvs/all/bin/ipython --profile=all'
+alias vi='/usr/bin/vim'
+alias vim='nvim'
 
 export EDITOR="nvim"
 export PAGER="less -rF"
@@ -44,6 +48,10 @@ export PATH
 
 fpath=(~/zsh $fpath)
 fpath+=(/opt/homebrew/share/zsh/site-functions/)
+
+if [ -f ~/repos/zsh/zpy/zpy.plugin.zsh ]; then
+    . ~/repos/zsh/zpy/zpy.plugin.zsh
+fi
 
 
 # Custom functions
