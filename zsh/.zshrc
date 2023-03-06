@@ -24,7 +24,7 @@ alias cloc='tokei'
 alias ariadl='aria2c -j12 -x12 -s12 -k1M'
 alias zshreload='. $HOME/.zshrc'
 alias zshedit='nvim $HOME/.zshrc'
-alias nvimedit='nvim ~/.config/nvim/init.vim'
+alias nvimedit='nvim -c "cd ~/code/dotfiles/nvim/.config/nvim"'
 alias pywork='workond && c.'
 alias rgl='rgless'
 alias tn='tmux neww'
@@ -36,6 +36,7 @@ alias ssh='TERM=xterm-256color ssh'
 alias aipy='~/.venvs/all/bin/ipython --profile=all'
 alias vi='/usr/bin/vim'
 alias vim='nvim'
+alias c='cargo'
 
 export EDITOR="nvim"
 export PAGER="less -rF"
@@ -43,6 +44,7 @@ export BAT_PAGER="less -iRF"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export RUSTC_WRAPPER="$HOME/.cargo/bin/sccache"
 PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH
 
@@ -52,6 +54,9 @@ fpath+=(/opt/homebrew/share/zsh/site-functions/)
 if [ -f ~/repos/zsh/zpy/zpy.plugin.zsh ]; then
     . ~/repos/zsh/zpy/zpy.plugin.zsh
 fi
+
+eval "$(zoxide init zsh)"
+alias cd='z'
 
 
 # Custom functions

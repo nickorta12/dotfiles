@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "coc-pyright": ">=1.1.215"
-  },
-  "disabled": [],
-  "locked": []
-}
