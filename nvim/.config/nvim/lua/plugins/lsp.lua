@@ -209,7 +209,7 @@ local function config_lsp(_, _)
   end
 
   local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
-  local auto_langs = { "gopls", "clangd", "myst", "lua_ls", "bashls" }
+  local auto_langs = { "gopls", "clangd", "lua_ls", "bashls" }
 
   for _, server in ipairs(auto_langs) do
     lspconfig[server].setup({
