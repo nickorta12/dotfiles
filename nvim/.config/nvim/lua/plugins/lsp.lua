@@ -93,10 +93,10 @@ local function config_lsp(_, _)
         end,
       },
       sources = {
-        { name = "path" },
         { name = "nvim_lsp", keyword_length = 3 },
         { name = "buffer",   keyword_length = 3 },
-        -- {name = 'luasnip', keyword_length = 2},
+        { name = "path" },
+        { name = "luasnip",  keyword_length = 2 },
       },
       window = {
         documentation = vim.tbl_deep_extend("force", cmp.config.window.bordered(), {
@@ -306,10 +306,16 @@ return {
       { "onsails/lspkind.nvim" },
 
       --- Better signature help
-      {
+      --[[ {
         "ray-x/lsp_signature.nvim",
-        config = true,
-      },
+        opts = {
+          bind = true,
+          handler_opts = {
+            border = "rounded",
+          },
+          fix_pos = true,
+        },
+      }, ]]
 
       -- Snippets
       { "L3MON4D3/LuaSnip" },
@@ -378,10 +384,10 @@ return {
       "go",
     },
     cond = function()
-      return not vim.g.disable_lsp
+      return not vim.g.disable_lsp and not vim.g.vscode
     end,
   },
-  {
+  --[[ {
     "kosayoda/nvim-lightbulb",
     event = "VeryLazy",
     dependencies = {
@@ -397,5 +403,8 @@ return {
     opts = {
       autocmd = { enabled = true },
     },
-  },
+    cond = function()
+      return not vim.g.disable_lsp and not vim.g.vscode
+    end,
+  }, ]]
 }

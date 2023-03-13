@@ -11,5 +11,8 @@ return {
   },
   opts = {
     follow_curent_file = true,
-  }
+  },
+  cond = function()
+    return not vim.g.vscode
+  end
 }

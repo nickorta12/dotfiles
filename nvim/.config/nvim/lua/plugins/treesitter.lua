@@ -29,5 +29,8 @@ return {
   },
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
+  end,
+  cond = function()
+    return not vim.g.vscode
   end
 }

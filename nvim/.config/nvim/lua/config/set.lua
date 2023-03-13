@@ -23,6 +23,8 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
+vim.opt.wrap = false
+
 vim.api.nvim_create_user_command("Format", function()
     vim.lsp.buf.format()
 end, {})

@@ -32,12 +32,18 @@ return {
     lazy = false,
     keys = {
       { "<leader>gs", vim.cmd.Git, { desc = "Git status" } },
-    }
+    },
+    cond = function()
+      return not vim.g.vscode
+    end,
   },
   {
     "lewis6991/gitsigns.nvim",
     version = "*",
     config = true,
+    cond = function()
+      return not vim.g.vscode
+    end,
   },
   { "rbong/vim-flog" },
 }

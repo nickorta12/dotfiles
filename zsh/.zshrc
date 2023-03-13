@@ -43,8 +43,10 @@ export PAGER="less -rF"
 export BAT_PAGER="less -iRF"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export RUSTC_WRAPPER="$HOME/.cargo/bin/sccache"
+export PYENV_ROOT="$HOME/.pyenv"
+
 PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+PATH="$PYENV_ROOT/bin:$PATH:$HOME/.local/share/bob/nvim-bin"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH
 
@@ -413,3 +415,7 @@ hex() {
 
 # ctrl-s will no longer freeze the terminal.
 stty erase "^?"
+
+
+# pyenv
+eval "$(pyenv init -)"
