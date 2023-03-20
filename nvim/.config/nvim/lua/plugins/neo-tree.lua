@@ -7,7 +7,7 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = {
-    { "<leader>tt", ":NeoTreeFocusToggle<CR>", { desc = "Toggle file tree" } },
+    { "<leader>t", ":NeoTreeFocusToggle<CR>", { desc = "Toggle file tree" } },
   },
   opts = {
     follow_curent_file = true,
